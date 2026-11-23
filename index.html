@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naman Chordia</title>
+  <style>
+    :root {
+      color-scheme: light;
+      background-color: #FFFFFF;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.87' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.19'/%3E%3C/svg%3E");
+      color: #292722;
+      font: 1.1rem/1.5 "Times New Roman", Times, serif;
+    }
+
+    body {
+      margin: clamp(2rem, 9vh, 4.5rem) clamp(1.25rem, 6vw, 6rem);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.65rem 2rem;
+      margin-bottom: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5125rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: flex-end;
+      margin-inline-start: auto;
+      gap: 0.35rem 1.2rem;
+    }
+
+    main {
+      max-width: 48rem;
+    }
+
+    nav a {
+      color: inherit;
+      line-height: 1.1;
+      text-decoration: underline;
+      text-underline-offset: 0.16em;
+    }
+
+    main > section {
+      display: none;
+    }
+
+    #roots,
+    main > section:target {
+      display: block;
+    }
+
+    main:has(> section:target) > #roots:not(:target) {
+      display: none;
+    }
+
+    p {
+      margin: 0 0 1.25em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Naman Chordia</h1>
+    <nav aria-label="Site navigation">
+      <a href="#roots">Roots</a>
+      <a href="#artifacts">Artifacts</a>
+    </nav>
+  </header>
+  <main>
+    <section id="roots" aria-label="Roots">
+      <p>Hi, I’m Naman Chordia. This is my little corner of the internet.</p>
+      <p>I’m keeping this page simple. For now, it’s just a place to share a few words.</p>
+    </section>
+    <section id="artifacts" aria-label="Artifacts">
+      <p>tbd</p>
+    </section>
+  </main>
+</body>
+</html>
